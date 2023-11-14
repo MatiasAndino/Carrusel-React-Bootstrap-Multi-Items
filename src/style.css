@@ -1,17 +1,29 @@
-/* @media (min-width: 768px) {
-    
-    .carousel-inner .carousel-item-end.active,
-    .carousel-inner .carousel-item-next {
-      transform: translateX(25%);
-    }
-    
-    .carousel-inner .carousel-item-start.active, 
-    .carousel-inner .carousel-item-prev {
-      transform: translateX(-25%);
-    }
+body {
+  background-color: #171725;
 }
 
-.carousel-inner .carousel-item-end,
-.carousel-inner .carousel-item-start { 
-  transform: translateX(0);
-} */
+
+.carousel-control-prev, .carousel-control-next{
+  background-color: #515151;
+  width: 5vh;
+  height: 20vh;
+  border-radius: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#carouselExample {
+  display: flex;         /* Utiliza Flexbox para mostrar los elementos en una fila */
+  overflow: auto;        /* Agrega desplazamiento horizontal si los elementos no caben en la pantalla */
+}
+
+.carousel-item {
+  flex: 0 0 auto;         /* Hace que los elementos no se expandan y mantengan su tamaño original */
+  max-width: 100%;        /* Limita el tamaño máximo de cada elemento al 100% del contenedor padre */
+}
+
+.img-flush {
+  width: 11%;            /* Hace que las imágenes ocupen todo el ancho del contenedor */
+  height: auto;           /* Mantiene la proporción original de la imagen */
+  /* max-height: 450px;  */
+}
